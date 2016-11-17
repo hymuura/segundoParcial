@@ -6,10 +6,11 @@ import java.util.Collection;
 import java.util.List;
 
 import comunes.Archivo;
+import comunes.Coloreo;
 import comunes.Dijkstra;
 import comunes.Nodo;
 
-public class RescatandoALaPrincesa {
+public class App {
 	public static void main(String[] args){
 		
 		int[] costoDragones;
@@ -19,6 +20,8 @@ public class RescatandoALaPrincesa {
 		String pathSalida="C:\\Users\\Daniel\\Desktop\\prueba\\rescateResp.txt";
 		
 		LaberintoMagico lm = Archivo.armarGrafoRescateDesdeArchivo(pathEntrada);
+		
+		System.out.println(Coloreo.Colorear(lm.getGrafo()));
 		
 		Dijkstra dij = new Dijkstra(lm.getGrafo(), lm.getPosicionPrincesa());
 		
